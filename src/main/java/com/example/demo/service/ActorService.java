@@ -22,4 +22,8 @@ public class ActorService {
         return actorRepository.findAll();
 
     }
+
+    public void save(Actor actor) {
+        actorRepository.save(actor);
+    }
 }
