@@ -1,11 +1,14 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.Actor;
 import com.example.demo.repository.ActorRepository;
 import com.example.demo.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 @Controller
 public class DemoController {
@@ -34,6 +37,13 @@ public class DemoController {
     public String hola(Model model) {
         model.addAttribute("usuario","Pepe");
         return "nuevavista";
+    }
+
+    @GetMapping("/actores")
+    public String actores(Model model) {
+        List<Actor> actores=actorService.findAll();
+        model.addAttribute("actores", actores);
+        return "actores";
     }
 
 }
