@@ -45,5 +45,10 @@ public class DemoController {
         model.addAttribute("actores", actores);
         return "actores";
     }
+    @GetMapping("/actores/nuevo")
+    public String nuevoActor() {
+
+        return "nuevo_actor";
+    }
 
 }
