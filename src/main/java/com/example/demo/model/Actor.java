@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int actor_id;
+    private Long actor_id;
     private String first_name;
     private String last_name;
     private LocalDate last_update;
@@ -18,11 +18,11 @@ public class Actor {
     public Actor() {
     }
 
-    public int getActor_id() {
+    public Long getActor_id() {
         return actor_id;
     }
 
-    public void setActor_id(int actor_id) {
+    public void setActor_id(Long actor_id) {
         this.actor_id = actor_id;
     }
 
