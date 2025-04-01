@@ -16,6 +16,14 @@ public class DemoController {
     public String demo(Model model) {
         model.addAttribute("mensaje", "¡Hola, bienvenido a la aplicación!");
         // Devuelve el nombre de la vista, por ejemplo, "hola.html" en src/main/resources/templates
+        model.addAttribute("nombre", "Juan");
         return "hola";
     }
+
+    @GetMapping("/hola")
+    public String hola(Model model) {
+        model.addAttribute("usuario","Pepe");
+        return "nuevavista";
+    }
+
 }
