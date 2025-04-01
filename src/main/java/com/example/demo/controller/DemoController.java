@@ -1,11 +1,21 @@
 package com.example.demo.controller;
 
+import com.example.demo.repository.ActorRepository;
+import com.example.demo.service.ActorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class DemoController {
+    private ActorService actorService;
+
+    @Autowired
+    public DemoController(ActorService actorService) {
+        this.actorService = actorService;
+    }
+
     @GetMapping("/prueba")
     public String prueba(Model model) {
         return "prueba";
