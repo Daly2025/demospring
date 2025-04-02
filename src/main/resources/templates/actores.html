@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actores</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" th:href="@{/css/actores.css}">
 </head>
 <body>
-<!--Mostramos nombre de actores-->
+<!-- Mostramos nombre de actores -->
 <h1>Actores</h1>
 <table>
     <thead>
@@ -18,7 +21,6 @@
     <tr th:each="actor : ${actores}">
         <td th:text="${actor.first_name}"></td>
         <td th:text="${actor.last_name}"></td>
-
     </tr>
     </tbody>
 </table>
